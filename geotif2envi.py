@@ -108,6 +108,7 @@ def read_file_list(file_path):
 
 def save_list_to_file(data_list, file_path):
     with open(file_path, 'w') as file:
+        file.write(f"{len(data_list)}\n")
         for item in data_list:
             file.write(f"{item}\n")
 
